@@ -11,7 +11,7 @@ public class Singe extends Animal {
 		public Singe(String nom) {
 			super(nom);
 			this.setAgeMaxi(20);
-			 
+			this.vieillisement = 1;
 		}
 
 		public String crier(){

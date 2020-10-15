@@ -4,13 +4,14 @@ public class Oiseau extends Animal {
 	public Oiseau(){
 		super();
 		this.setAgeMaxi(10);
-		 
+		this.vieillisement = 2;
 	}
 
 	public Oiseau(String nom) {
 		super(nom);
 		this.setAgeMaxi(10);
-		 
+		this.vieillisement = 2;
+
 	}
 
 	public String crier(){

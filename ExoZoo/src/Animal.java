@@ -6,6 +6,7 @@ public class Animal {
 	private int ageMaxi;
 	public int vieillisement;
 	public String nom;
+	private Zoo zoo;
 
 	public Animal() {
 		 
@@ -79,8 +80,17 @@ public class Animal {
 
 	public void mourir() {
 		this.setVivant(false);
+		zoo.retirer(this);
 	}
 	
+	public Zoo getZoo() {
+		return zoo;
+	}
+
+	public void setZoo(Zoo zoo) {
+		this.zoo = zoo;
+	}
+
 	public void vieillir() {
 		if (this.getAge() >= this.getAgeMaxi())  // doitMourir()
 			this.mourir();
@@ -93,6 +103,17 @@ public class Animal {
 	private void basicVieillir() {
 		age += vieillisement;
 	}
+	public String nourrir() {
+		// TODO Auto-generated method stub
+		return this.crier();
+	}
+
+	public String crier() {
+		return "ne peux pas crier";
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		if (this.isVivant())
@@ -100,6 +121,7 @@ public class Animal {
 		return this.getNom() + " est décédé";
 	}
 
+	
 	 
 
 }

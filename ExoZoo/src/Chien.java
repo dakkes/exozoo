@@ -12,6 +12,7 @@ public Chien() {
 	public Chien(String nom) {
 		super(nom);
 		 this.setAgeMaxi(80);
+		 this.vieillisement = 7;
 	}
 
 public String crier(){
